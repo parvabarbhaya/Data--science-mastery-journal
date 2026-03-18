@@ -1,3 +1,4 @@
+
 # This is an practical example of uusing user input, Type casting, and changing types of the variable.
 
 user_input=("Enter some text:")
@@ -11,13 +12,16 @@ print("Anant\tAmbani")
 print("Anant \ Ambani")
 
 #Format function
-name = "parva"
+name = "Sam"
 age = "18"
 print("My name  is {} and I am {}  year old ".format(name,age))
 
+# we can also use shorter version of format function which is called as f string.
+print(f"My mane is {name} and I am {age} years old.") # this is the most optimam way to use string formation in python.
+
 #Raw string : what raw string does is that it will keep all the quotes, aslash and unique symbol in the form of string useful when working in data calling. 
 
-print(r"rparva")
+print(r"r relinace")
 
 #type casting : Type casting is used to convert the type of one variable type to another.
 
