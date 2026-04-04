@@ -54,3 +54,20 @@ print(f"Teh minimum number is: {minimum_number}")
 number = (1,2,34,56,7,5,8,954,45,23,12,323,54)
 sumed_number = sum(number)
 print(f"The sum of all the number is: {sumed_number}")
+
+
+# Tuple Comprehension (using a generator expression)
+# Python doesn't have a direct tuple comprehension syntax like list comprehensions `[x for x in ...]`.
+# Using `(x for x in iterable)` creates a generator object, not a tuple.
+# To create a tuple using a comprehension-like syntax, you must pass a generator expression to the tuple() constructor.
+
+# Example: Create a tuple of odd numbers from a range
+numbers_to_check = range(1, 11) # Numbers from 1 to 10
+odd_numbers_tuple = tuple(n for n in numbers_to_check if n % 2 != 0)
+
+print(f"\nOriginal range of numbers: {list(numbers_to_check)}")
+print(f"Tuple of odd numbers: {odd_numbers_tuple}")
+
+# Explanation:
+# 1. `n for n in numbers_to_check if n % 2 != 0` is a generator expression. It iterates through `numbers_to_check` and yields only the numbers that satisfy the `if` condition (are odd).
+# 2. `tuple(...)` is a built-in function that takes an iterable (like the generator expression) and creates
