@@ -93,3 +93,28 @@ new_dict['vehical'] = names[0]
 new_dict['occupation'] = names[1]
 print(f"\nDictionary created from a list of lists: {new_dict}")
 print(f"Accessing the list of vehicles: {new_dict['vehical']}")
+
+
+                                # Dictionary Comprehension
+print("\n--- Dictionary Comprehension ---")
+# Dictionary comprehension offers a short syntax for creating a dictionary.
+
+# Example 1: Creating a dictionary of squares
+numbers = [1, 2, 3, 4, 5]
+squares_dict = {num: num**2 for num in numbers}
+print(f"Dictionary of squares: {squares_dict}")
+
+# Explanation:
+# 1. `{...}`: This indicates we are creating a dictionary.
+# 2. `num: num**2`: This is the key-value pair. For each item, the item itself (`num`) becomes the key, and its square (`num**2`) becomes the value.
+# 3. `for num in numbers`: This is the loop part. It iterates through each `num` in the `numbers` list.
+
+# Example 2: Creating a dictionary with a condition
+original_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+even_values_dict = {k: v for (k, v) in original_dict.items() if v % 2 == 0}
+print(f"New dictionary with only even values: {even_values_dict}")
+
+# Explanation:
+# 1. `original_dict.items()`: This provides the key-value pairs from the original dictionary.
+# 2. `for (k, v) in ...`: This loop unpacks each key-value pair into `k` and `v`.
+# 3. `if v % 2 == 0`: This is a condition that filters the items, only including the pair if the value `v` is even.
