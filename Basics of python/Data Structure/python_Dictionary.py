@@ -14,6 +14,7 @@ person.pop('city') # Removes the 'city' key-value pair
 print(f"After popping 'city': {person}")
 
 # The 'del' keyword also deletes a key-value pair from the dictionary.
+
 del person['age']
 print(f"After deleting 'age': {person}\n")
 
@@ -28,23 +29,28 @@ fruit.update({'orange':5})
 print(f"Dictionary after updating with 'orange': {fruit}\n")
 
 x = {"Good_students":40, 'Bad_Students':20,'students_in_sorts': 10}
+
 #using clear function (will clear all the items form the dict)
+
 y= x.copy()
 print(f"Copied dictionary 'y' before clearing: {y}")
 y.clear()
 print(f"Dictionary 'y' after .clear(): {y}\n")
 
 # using pop function (will pop one item)
+
 x. pop('Good_students')
 print(f"Dictionary 'x' after popping 'Good_students': {x}")
 
 # using setdefault function: returns the value of a key. If the key doesn't exist, it inserts the key with a default value.
+
 x.setdefault('students_in_sorts')
 print(f"After .setdefault('students_in_sorts'), no change as key exists: {x}")
 x.setdefault('new_students', 0)
 print(f"After .setdefault('new_students', 0), new key is added: {x}")
 
 # using popitem function (removes the last inserted item in Python 3.7+)
+
 x.popitem()
 print(f"Dictionary 'x' after .popitem() (removes last item): {x}\n")
 
@@ -57,6 +63,7 @@ fruit1.update(fruit2)
 print(f"Merged dictionary (fruit1 updated with fruit2): {fruit1}")
 
 # defaultdict is useful to avoid errors when a key doesn't exist. It provides a default value instead.
+
 from collections import defaultdict
 fruit_counts = defaultdict(int) # 'int' provides a default value of 0
 fruit_counts['apple'] = 5
@@ -65,7 +72,9 @@ print(f"Accessing missing key 'banana' in defaultdict: {fruit_counts['banana']}"
 print(f"The defaultdict now contains the new key: {fruit_counts}")
 
                                 # Missing keys using .get()
+
 # The .get() method is another safe way to access keys that might not exist.
+
 fruit={'a':1,'b':2}
 print(f"\nUsing .get() for a missing key 'c' with a default value of 0: {fruit.get('c', 0)}")
 print(f"The original dictionary is unchanged: {fruit}")
@@ -74,6 +83,7 @@ print(f"The original dictionary is unchanged: {fruit}")
 #orderdict()
 # OrderedDict remembers the order that keys were first inserted.
 # Note: Since Python 3.7, standard dictionaries also preserve insertion order.
+
 from collections import OrderedDict
 fruit=OrderedDict()
 fruit['a']=1
@@ -110,6 +120,7 @@ print(f"Dictionary of squares: {squares_dict}")
 # 3. `for num in numbers`: This is the loop part. It iterates through each `num` in the `numbers` list.
 
 # Example 2: Creating a dictionary with a condition
+
 original_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 even_values_dict = {k: v for (k, v) in original_dict.items() if v % 2 == 0}
 print(f"New dictionary with only even values: {even_values_dict}")
