@@ -129,3 +129,60 @@ print(f"New dictionary with only even values: {even_values_dict}")
 # 1. `original_dict.items()`: This provides the key-value pairs from the original dictionary.
 # 2. `for (k, v) in ...`: This loop unpacks each key-value pair into `k` and `v`.
 # 3. `if v % 2 == 0`: This is a condition that filters the items, only including the pair if the value `v` is even.
+
+
+################# Nested dictionary 
+
+# A nested dictionary containing four other dictionaries
+students = {
+        'student_01': {
+            'name': 'Alice',
+            'age': 21,
+            'major': 'Computer Science'
+        },
+        'student_02': {
+            'name': 'Bob',
+            'age': 22,
+            'major': 'Physics'
+        },
+        'student_03': {
+            'name': 'Charlie',
+            'age': 20,
+            'major': 'Mathematics'
+        },
+        'student_04': {
+            'name': 'Diana',
+            'age': 23,
+            'major': 'Chemistry'
+        }
+    }
+
+# --- How to work with this nested dictionary ---
+
+# 1. Print the entire nested dictionary
+print("--- Complete Nested Dictionary ---")
+print(students)
+print("\n")
+
+# 2. Accessing information
+# To get all details for a specific student (e.g., student_02)
+bob_details = students['student_02']
+print(f"Details for student_02: {bob_details}")
+
+# To get a specific piece of information (e.g., Charlie's age)
+charlie_age = students['student_03']['age']
+print(f"Age of student_03 (Charlie): {charlie_age}")
+print("\n")
+
+# 3. Modifying a value
+# Let's update Diana's major
+print(f"Diana's original major: {students['student_04']['major']}")
+students['student_04']['major'] = 'Biology'
+print(f"Diana's new major: {students['student_04']['major']}")
+print("\n")
+
+# 4. Adding a new key-value pair to an inner dictionary
+# Let's add a GPA for Alice
+print(f"Alice's details before adding GPA: {students['student_01']}")
+students['student_01']['gpa'] = 3.8
+print(f"Alice's details after adding GPA: {students['student_01']}")
